@@ -9,7 +9,7 @@ rpi-noip is a docker image of the official [no-ip](http://www.noip.com/) Dynamic
 
 2. Run `docker run -ti -v "noip:/usr/local/etc/" hypriot/rpi-noip noip2 -C`
 
-This step will ask for your noip credentials and generate the necessary configuration for your container to run
+  This step will ask for your noip credentials and generate the necessary configuration for your container to run
 
 3. Run `docker run -v "noip:/usrc/local/etc/" --restart=always hypriot/rpi-noip` 
 
