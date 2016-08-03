@@ -1,0 +1,33 @@
+build:
+  image: firecyberice/rpi-docker:1.10.0-dev
+  extra_hosts:
+    - docker
+  environment:
+    - DOCKER_HOST=tcp://localhost:2375
+
+compose:
+  docker:
+    privileged: true
+    image: firecyberice/rpi-docker:1.10.0-dev-dind
+
+publish:
+  docker:
+    username: $$DOCKER_USER
+    password: $$DOCKER_PASS
+    email: $$DOCKER_EMAIL
+    repo: hypriot/rpi-noip
+    tag:
+      - latest
+    file: Dockerfile
+    when:
+      branch: master
+
+notify:
+  slack:
+    webhook_url: $$SLACK_WEBHOOK_URL
+    channel: buildstatus
+    username: Drone
+    when:
+      started: false
+      success: true
+      failure: true
