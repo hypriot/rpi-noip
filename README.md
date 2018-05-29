@@ -16,6 +16,14 @@ rpi-noip is a docker image of the official [no-ip](http://www.noip.com/) Dynamic
   This will start your noip container daemon and it will restart it even if you restart your pi, now you can access your
 device anywhere in the world as it will update the DNS automatically
 
+
+## Buy us a beer!
+
+This FLOSS software is funded by donations only. Please support us to maintain and further improve it!
+
+<a href="https://liberapay.com/Hypriot/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a>
+
+
 ## License
 
 MIT
